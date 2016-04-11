@@ -2,6 +2,12 @@
 #include <string>
 #include <vector>
 
+enum myenum
+{
+	women=0,
+	men=1
+};
+
 using namespace std;
 
 class Slav
@@ -24,4 +30,6 @@ public:
 	int id() { return _id; }
 
 	string description();
+
+	myenum menwomen();;
 };

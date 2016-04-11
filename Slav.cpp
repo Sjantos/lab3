@@ -1,10 +1,15 @@
 #include "Slav.h"
 #include <fstream>
+#include <cstdlib>
+#include <iterator>
+#include <iostream>
 
 using namespace std;
 
 vector <string> Slav::names;
 int Slav::_counter = 0;
+
+
 
 void Slav::init()
 {
@@ -26,4 +31,10 @@ Slav::Slav()
 string Slav::description()
 {
 	return string("  ") + _name + " [" + to_string(_id) + "]";
+}
+
+myenum Slav::menwomen()
+{
+	
+	if(_name.back()=='a') return myenum(women); else return myenum(men);
 }
